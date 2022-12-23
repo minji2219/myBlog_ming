@@ -39,4 +39,16 @@
 </ul>
 
 <h2 style="font-weight:bold;">3.확인 받고 싶은 부분</h2>
+확인 받고 싶었던 내용이 궁금했던 내용과 겹치는거 같습니다
+추가로 효율적으로 코드가 작성됐는지 확인 받고 
+
+
+<h2 style="font-weight:bold;">4.궁금했던 부분</h2>
 <img width="916" alt="image" src="https://user-images.githubusercontent.com/119796600/209284140-b71003df-3fe5-4931-8d2a-0f46f6bc1882.png">
+댓글 입력시 댓글이 추가된 상태의 상세페이지로 새로고침(?)이 되고 싶은데 
+res.redirect('/detail/:id')를 하게 되면 detail.ejs에 제목, 내용등이 같이 전달되지 않아 오류가 떠 어쩔수 없이 list로 redirect했습니다... 해결하고 싶어요 !
+
+<img width="631" alt="image" src="https://user-images.githubusercontent.com/119796600/209285771-e0d5331a-1c43-406e-88a5-f29e8ec919bd.png">
+게시물 등록시 counter라는 컬렉션의 게시물갯수가 1씩 증가하게 구현해둬서 게시물의 id를 그거랑 연동을 시켰는데
+게시물을 중간에 삭제하게 해도 counter의 게시물갯수 수는 변함이 없으니 총 게시물 수 같은 것을 나타낼때 중간 게시물 삭제가 반영되지 않습니다.
+삭제시 counter의 게시물갯수도 변경하고 싶습니다
