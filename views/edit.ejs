@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style/post.css">
+    <meta
+        name="viewport"
+        content="width=device-width", initial-scale="1.0"
+        user-scaleable="yes">
+        
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <%-include('head.ejs') %>
+        <!--main-->
+        <div id="post">
+            <h1>수정하기 !</h1>
+            
+        </div>
+        <form action="/edit?_method=PUT" method="POST" class="write">
+            <input  value="<%=data._id%>" name="id" style="display:none;">
+            제목 : <input value="<%= data.제목%>" type="text" name="title"><br>
+            내용 : <br>
+            <textarea cols="100" rows="30" name="write"><%= data.내용%></textarea>
+             <button type="submit" id="post_button">Edit</button><br>
+        </form>    
+
+    </div>
+</body>
+</html>

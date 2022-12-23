@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style/home.css">
+    <meta
+        name="viewport"
+        content="width=device-width", initial-scale="1.0"
+        user-scaleable="yes">
+        
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <%-include('head.ejs') %>
+       
+       <!--intro end-->
+       <ul class="amount">
+            <li><div>
+                <div class="contents1">이름은</div>
+                <div>서민지</div>
+            </div></li>
+            <li><div>
+                <div class="contents1">생년월일은</div>
+                <div>2001.02.19</div>
+            </div></li>
+            <li><div>
+                <div class="contents1">혈액형은</div>
+                <div>A형</div>
+            </div></li>
+            <li><div>
+                <div class="contents1">취미는</div>
+                <div>?</div>
+            </div></li>
+       </ul>
+       <!--amount end-->
+
+       <div class="main_text0">
+            <h1>COUNT</h1>
+            <div class="contents1">오늘의 집계</div>
+            
+            <ul class="icons">
+                <li>
+                    <div class="icon_img">
+                        <img src="image/icon0.svg.svg">
+                    </div>
+                    <div class="contents1_bold">방문자 수</div>
+                    <div class="contents1">3,200명</div>
+                    
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="image/icon1.svg.svg">
+                    </div>
+                    <div class="contents1_bold">게시물 수</div>
+                    <div class="contents1"><%=count%>개</div>
+                </li>
+                <li>
+                    <div class="icon_img">
+                        <img src="image/icon2.svg.svg">
+                    </div>
+                    <div class="contents1_bold">좋아요 수</div>
+                    <div class="contents1">❤️8,351</div>
+                </li>
+            </ul>
+       </div>
+
+       <div class="main_text1">
+            <h1>미리보기</h1>
+            <div class="contents1">제 게시물들을 클릭해보세요~</div>
+            <div class="service">
+                <div class="food">
+                    <img src="image/hello.png">
+                </div>
+                <div class="contents1">
+                    <div id="list">
+                        <h2>글 목록</h2>
+                        <br>
+                        <ul>
+                        <%for(var i=0; i<posts.length; i++){%>
+                        <a href="/detail/<%= posts[i]._id %>"><li><h3>💌<%=posts[i].제목%></h3>
+                        
+                        </li>
+                        <% }%>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        <div class="main_text2">
+            <ul>
+                <li>
+                    <div><h1>CONTACT</h1></div>
+                    <div>☎ 저의 휴대폰 번호는 ☎</div>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

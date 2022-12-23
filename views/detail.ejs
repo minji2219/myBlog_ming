@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style/detail.css">
+    <meta
+        name="viewport"
+        content="width=device-width", initial-scale="1.0"
+        user-scaleable="yes">
+        
+    <style>
+    </style>
+
+</head>
+<body >
+
+    <div class="wrap">
+        <%-include('head.ejs') %>
+            <div id="content">
+                <h1>상세페이지</h1>
+                <hr>
+                <h2>제목 :<%=data.제목 %></h2>
+                <br>
+                <pre><%=data.내용 %></pre>
+                <hr>
+            </div>
+            <div class="coment">
+                <h1>댓글(<%=coments.length%>)</h1>
+                <hr>
+                <div class="coment_show">
+                    <ul>
+                        <%for(var i=0; i<coments.length; i++){ %>
+                                <li><h2><%=coments[i].댓글%></h2></li>  
+                        <% }%>
+                    </ul>
+                </div><br>
+                <form action="/comentadd" method="POST" class="coment_write">
+                <textarea placeholder="댓글을 입력하세요" cols="100" rows="4" name="coment"></textarea>
+                <button name ="addd" class="add" value="<%=data._id%>" type="submit">작성</button>
+                </form>
+            </div>
+
+         
+        </div>
+        <!--main-->

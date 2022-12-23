@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style/post.css">
+    <meta
+        name="viewport"
+        content="width=device-width", initial-scale="1.0"
+        user-scaleable="yes">
+        
+    <style>
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <%-include('head.ejs') %>
+        <!--main-->
+        <div id="post">
+            <h1>오늘의 일상을 post해보세요 !</h1>
+            
+        </div>
+        <form action="/add" method="POST" class="write">
+            제목 : <input type="text" name="title"><br>
+            내용 : <br>
+            <textarea placeholder="글 내용을 입력하세요" cols="100" rows="30" name="write"></textarea>
+             <button type="submit" id="post_button">POST</button><br>
+        </form>    
+
+    </div>
+</body>
+</html>
