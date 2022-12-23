@@ -31,10 +31,12 @@
   <ul><li>수정 버튼을 누른 게시물의 제목, 내용을 그대로 불러와 수정하여 DB에 업데이트 되게 설정</li></ul>
   <li>head.ejs : 블로그 navigation과 intro배경 사진등 각 페이지에 똑같이 들어가는 부분</li>
 </ul>
-<h2 style="font-weight:bold;">2.기술스택/h2>
-- 서버 : node.js
-- DB : mongoDB
-- 클라이언트 : html, css
+<h2 style="font-weight:bold;">2.기술스택</h2>
+<ul>
+  <li>서버 : node.js</li>
+  <li>DB : mongoDB</li>
+  <li>클라이언트 : html, css</li>
+</ul>
 
 <h2 style="font-weight:bold;">3.확인 받고 싶은 부분</h2>
 <img width="916" alt="image" src="https://user-images.githubusercontent.com/119796600/209284140-b71003df-3fe5-4931-8d2a-0f46f6bc1882.png">
